@@ -1,0 +1,9 @@
+---
+title: "Dash"
+---
+
+The purpose is to investigate Dash.
+
+Available for Python.
+
+Not yet ready in R <https://dash.plotly.com/r/minimal-app>
