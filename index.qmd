@@ -1,9 +1,9 @@
 ---
-title: "Dash"
+title: "Dash etc."
 ---
 
-The purpose is to investigate Dash.
+The purpose is to investigate Dash and similar interactive technologies.
 
-Available for Python.
+Dash is available for Python, but not ready not yet ready in for R at the time of writing <https://dash.plotly.com/r/minimal-app>
 
-Not yet ready in R <https://dash.plotly.com/r/minimal-app>
+Example #2 works with Observable JS
