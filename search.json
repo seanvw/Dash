@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "example_1.html",
-    "href": "example_1.html",
-    "title": "Example #1",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Running a Dash app within Quarto is possible with ugly hacks and it isn’t pretty.\n\n\nShow Functions\n\n\n# Import packages\nfrom dash import Dash, html, dash_table, dcc, callback, Output, Input\nimport pandas as pd\nimport plotly.express as px\n\n# Incorporate data\n#df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv')\n\n# Initialize the app\napp = Dash(__name__)\n\n# App layout\napp.layout = html.Div([\n    html.Div(children='My First App with Data, Graph, and Controls'),\n    html.Hr(),\n    dcc.RadioItems(options=['pop', 'lifeExp', 'gdpPercap'], value='lifeExp', id='controls-and-radio-item'),\n    dash_table.DataTable(data=pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv').to_dict('records'), page_size=6),\n    dcc.Graph(figure={}, id='controls-and-graph')\n])\n\n# Add controls to build the interaction\n@callback(\n    Output(component_id='controls-and-graph', component_property='figure'),\n    Input(component_id='controls-and-radio-item', component_property='value')\n)\ndef update_graph(col_chosen):\n    import plotly.express as px\n    import pandas as pd\n    fig = px.histogram(pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv').to_dict('records'), x='continent', y=col_chosen, histfunc='avg')\n    return fig\n\n\n\nif __name__ == '__main__': app.run(debug=True) # Run the app"
+    "text": "About me"
   },
   {
     "objectID": "index.html",
@@ -14,10 +14,10 @@
     "text": "The purpose is to investigate Dash.\nAvailable for Python.\nNot yet ready in R https://dash.plotly.com/r/minimal-app"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "example_1.html",
+    "href": "example_1.html",
+    "title": "Example #1",
     "section": "",
-    "text": "About me"
+    "text": "Running a Dash app within Quarto was possible with ugly hacks but it isn’t pretty. May not work. And is not supported. Simply a code exploration to be ignored. Kept in the same way that a journal of negative results is a good thing.\n\n\nShow Functions\n\n\n# Import packages\nfrom dash import Dash, html, dash_table, dcc, callback, Output, Input\nimport pandas as pd\nimport plotly.express as px\n\n# Incorporate data\n#df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv')\n\n# Initialize the app\napp = Dash(__name__)\n\n# App layout\napp.layout = html.Div([\n    html.Div(children='My First App with Data, Graph, and Controls'),\n    html.Hr(),\n    dcc.RadioItems(options=['pop', 'lifeExp', 'gdpPercap'], value='lifeExp', id='controls-and-radio-item'),\n    dash_table.DataTable(data=pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv').to_dict('records'), page_size=6),\n    dcc.Graph(figure={}, id='controls-and-graph')\n])\n\n# Add controls to build the interaction\n@callback(\n    Output(component_id='controls-and-graph', component_property='figure'),\n    Input(component_id='controls-and-radio-item', component_property='value')\n)\ndef update_graph(col_chosen):\n    import plotly.express as px\n    import pandas as pd\n    fig = px.histogram(pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapminder2007.csv').to_dict('records'), x='continent', y=col_chosen, histfunc='avg')\n    return fig\n\n\n\nif __name__ == '__main__': app.run(debug=True) # Run the app"
   }
 ]
