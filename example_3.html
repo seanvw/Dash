@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dash - Palmer Penguins</title>
+<title>Dash - Example #3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -140,11 +140,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Example #1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./example_2.html" aria-current="page"> 
+    <a class="nav-link" href="./example_2.html"> 
 <span class="menu-text">Example #2</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./example_3.html"> 
+    <a class="nav-link active" href="./example_3.html" aria-current="page"> 
 <span class="menu-text">Example #3</span></a>
   </li>  
 </ul>
@@ -162,11 +162,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="navbar-brand-container">       
 
       <div class="navbar-title">
-        <div class="navbar-title-text"><a href="#">Palmer Penguins</a></div>
+        <div class="navbar-title-text"><a href="#">Example #3</a></div>
         
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-plot" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#plot" href="#plot" aria-controls="plot" aria-selected="true"><span class="nav-link-text">Plot</span></a></li><li class="nav-item" role="presentation"><a id="tab-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#data" href="#data" aria-controls="data" aria-selected="false"><span class="nav-link-text">Data</span></a></li></ul></div></div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-plot" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#plot" href="#plot" aria-controls="plot" aria-selected="true"><span class="nav-link-text">Plot</span></a></li><li class="nav-item" role="presentation"><a id="tab-plot2" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#plot2" href="#plot2" aria-controls="plot2" aria-selected="false"><span class="nav-link-text">Plot2</span></a></li><li class="nav-item" role="presentation"><a id="tab-data" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#data" href="#data" aria-controls="data" aria-selected="false"><span class="nav-link-text">Data</span></a></li></ul></div></div>
 
 
 </nav>
@@ -177,15 +177,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
 <!-- main -->
 
-<p>This example from “Cobblepot Analytics”. The data downloaded as penguins.csv (also available in R and Python packages). Likewise the nice penguin image. Code uses Observable JS.</p>
 <div class="cell hidden bslib-grid-item html-fill-item">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="11" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 10;"><span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"penguins.csv"</span>)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(penguin) {</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> bill_length_min <span class="op">&lt;</span> penguin<span class="op">.</span><span class="at">bill_length_mm</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>         islands<span class="op">.</span><span class="fu">includes</span>(penguin<span class="op">.</span><span class="at">island</span>)<span class="op">;</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="9" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 8;"><span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"gistemp.csv"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(gistemp) {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> year_min <span class="op">&lt;</span> gistemp<span class="op">.</span><span class="at">Year</span> <span class="op">&amp;&amp;</span> months<span class="op">.</span><span class="fu">includes</span>(gistemp<span class="op">.</span><span class="at">month</span>)<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display hidden">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -208,23 +206,14 @@ grid-auto-rows: minmax(0, 1fr);">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
 <div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb3" data-startfrom="39" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 38;"><span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">rectY</span>(filtered<span class="op">,</span> </span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">binX</span>(</span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    {<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> </span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    {<span class="dt">x</span><span class="op">:</span> <span class="st">"body_mass_g"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="dv">20</span>}</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  ))</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    <span class="dt">facet</span><span class="op">:</span> {</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>      <span class="dt">data</span><span class="op">:</span> filtered<span class="op">,</span></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"sex"</span><span class="op">,</span></span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span></span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">80</span></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">frame</span>()<span class="op">,</span></span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb3" data-startfrom="34" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 33;"><span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"Year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"Anomoly_Celcius"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"month"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"month"</span>})</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"Test"</span><span class="op">,</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  <span class="dt">ariaDescription</span><span class="op">:</span> <span class="st">"Desc"</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <div id="ojs-cell-3" data-nodetype="expression" class="html-fill-item html-fill-container">
 
@@ -238,13 +227,53 @@ grid-auto-rows: minmax(0, 1fr);">
     </span>
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
-</div><div id="data" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-title="Data" data-orientation="rows" aria-labelledby="tab-data">
+</div><div id="plot2" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-title="Plot2" data-orientation="rows" aria-labelledby="tab-plot2">
 <div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
 <div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb4" data-startfrom="61" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 60;"><span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb4" data-startfrom="48" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 47;"><span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">"+C"</span><span class="op">,</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Surface temperature anomaly (°C)"</span></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>    <span class="dt">scheme</span><span class="op">:</span> <span class="st">"turbo"</span><span class="op">,</span></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filtered<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"Year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"Anomoly_Celcius"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"Anomoly_Celcius"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"Anomoly_Celcius"</span>})</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>  <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"Test"</span><span class="op">,</span></span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>  <span class="dt">ariaDescription</span><span class="op">:</span> <span class="st">"Desc"</span></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display html-fill-item html-fill-container">
 <div id="ojs-cell-4" data-nodetype="expression" class="html-fill-item html-fill-container">
+
+</div>
+</div>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div id="data" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-title="Data" data-orientation="rows" aria-labelledby="tab-data">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-layout="flow" data-bslib-card-init="" data-require-bs-caller="card()">
+<div class="card-body html-fill-item html-fill-container">
+<p>Code uses Observable JS.Uses the GisTemp data processed by the Dashboards mini-project and used in some examples e.g.&nbsp;<a href="https://seanvw.github.io/Dashboards/example_4.html#line-by-year-since.." title="Example #4">Example #4</a><br>
+</p>
+</div>
+<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="sourceCode cell-code hidden html-fill-item html-fill-container" id="cb5" data-startfrom="73" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 72;"><span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display html-fill-item html-fill-container">
+<div id="ojs-cell-5" data-nodetype="expression" class="html-fill-item html-fill-container">
 
 </div>
 </div>
@@ -261,18 +290,15 @@ grid-auto-rows: minmax(0, 1fr);">
 </div>
 </div>
 </div></div><aside id="bslib-sidebar-1" class="sidebar html-fill-container html-fill-item"><div class="sidebar html-fill-container html-fill-item">
-<p><img src="lter_penguins.png" class="img-fluid"></p>
 <div class="card-body">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="25" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 24;"><span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>viewof bill_length_min <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">32</span><span class="op">,</span> <span class="dv">50</span>]<span class="op">,</span> </span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">value</span><span class="op">:</span> <span class="dv">35</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Bill length (min):"</span>}</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>viewof islands <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Torgersen"</span><span class="op">,</span> <span class="st">"Biscoe"</span><span class="op">,</span> <span class="st">"Dream"</span>]<span class="op">,</span> </span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">value</span><span class="op">:</span> [<span class="st">"Torgersen"</span><span class="op">,</span> <span class="st">"Biscoe"</span><span class="op">,</span> <span class="st">"Dream"</span>]<span class="op">,</span> </span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Islands:"</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="22" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 21;"><span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>viewof year_min <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>( [<span class="dv">1880</span><span class="op">,</span> <span class="dv">2025</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">1880</span>} )</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>viewof months <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Jan"</span><span class="op">,</span> <span class="st">"Feb"</span><span class="op">,</span> <span class="st">"Mar"</span><span class="op">,</span> <span class="st">"Apr"</span><span class="op">,</span> <span class="st">"May"</span><span class="op">,</span> <span class="st">"Jun"</span><span class="op">,</span> <span class="st">"Jul"</span><span class="op">,</span> <span class="st">"Aug"</span><span class="op">,</span> <span class="st">"Sep"</span><span class="op">,</span> <span class="st">"Oct"</span><span class="op">,</span> <span class="st">"Nov"</span><span class="op">,</span> <span class="st">"Dec"</span>]<span class="op">,</span> </span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">value</span><span class="op">:</span> [<span class="st">"Jan"</span><span class="op">,</span> <span class="st">"Feb"</span><span class="op">,</span> <span class="st">"Mar"</span><span class="op">,</span> <span class="st">"Apr"</span><span class="op">,</span> <span class="st">"May"</span><span class="op">,</span> <span class="st">"Jun"</span><span class="op">,</span> <span class="st">"Jul"</span><span class="op">,</span> <span class="st">"Aug"</span><span class="op">,</span> <span class="st">"Sep"</span><span class="op">,</span> <span class="st">"Oct"</span><span class="op">,</span> <span class="st">"Nov"</span><span class="op">,</span> <span class="st">"Dec"</span>]<span class="op">,</span> </span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"months:"</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -301,7 +327,7 @@ bslib.Sidebar.initCollapsibleAll()
 
 
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"\ndata = FileAttachment(\"penguins.csv\")\n  .csv({ typed: true })\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"viewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\", \"Dream\"], \n    label: \"Islands:\"\n  }\n)\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"Plot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"Inputs.table(filtered)\n"},{"methodName":"interpretQuiet","source":"shinyInput('bill_length_min')"},{"methodName":"interpretQuiet","source":"shinyInput('islands')"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"\ndata = FileAttachment(\"gistemp.csv\")\n  .csv({ typed: true })\n\nfiltered = data.filter(function(gistemp) {\n  return year_min < gistemp.Year && months.includes(gistemp.month);\n})\n\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"\nviewof year_min = Inputs.range( [1880, 2025], {step: 1, value: 1880} )\n\nviewof months = Inputs.checkbox(\n  [\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"], \n  { value: [\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"], \n    label: \"months:\"\n  }\n)\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"Plot.plot({\n  marks: [\n    Plot.ruleY([0]),\n    Plot.dot(filtered, {x: \"Year\", y: \"Anomoly_Celcius\", fill: \"month\", stroke: \"month\"})\n  ],\n  ariaLabel: \"Test\",\n  ariaDescription: \"Desc\"\n})  \n  \n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"Plot.plot({\n  y: {\n    grid: true,\n    tickFormat: \"+C\",\n    label: \"Surface temperature anomaly (°C)\"\n  },\n  color: {\n    scheme: \"turbo\",\n    legend: false\n  },\n  marks: [\n    Plot.ruleY([0]),\n    Plot.dot(filtered, {x: \"Year\", y: \"Anomoly_Celcius\", fill: \"Anomoly_Celcius\", stroke: \"Anomoly_Celcius\"})\n  ],\n  ariaLabel: \"Test\",\n  ariaDescription: \"Desc\"\n})  \n  \n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"Inputs.table(filtered)\n"},{"methodName":"interpretQuiet","source":"shinyInput('year_min')"},{"methodName":"interpretQuiet","source":"shinyInput('months')"}]}
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
