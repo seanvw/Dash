@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dash - Dash etc.</title>
+<title>Dash - Dash, Observable etc.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -124,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dash etc.</h1>
+<h1 class="title">Dash, Observable etc.</h1>
 </div>
 
 
@@ -141,12 +141,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The purpose is to investigate Dash, Observable JS and similar interactive technologies for data exploration.</p>
-<p>Dash is available for Python, but <a href="https://dash.plotly.com/r/minimal-app">not yet ready at the time of writing</a></p>
+<section id="some-thoughts" class="level1">
+<h1>Some thoughts</h1>
+<p>The purpose here is to investigate the current status of Dash, Observable and similar interactive technologies for data exploration and presentation. There are normally many options, opinions, fluffy requirements, pros and cons that need to be considered in deciding which one(s) to use, if at all. Not least is the structure of the organization: who is tasked with performing the data analysis or data science? Dynamic plotting and easy accessibility is nice to have, but serious analysis often requires detailed data investigations (domain specific knowledge, careful validation of data, imputation of missing values, normalizations, transformations, statistical hypothesis tests, mathematics, modelling and so on). With this in mind, it is always good to ask why such tools are being deployed? Is it not better for the domain expert to learn some practical data science (or vice versa) or is the team approach better; having the subject domain experts work closely with the data science experts is probably the best option in terms of developing results, conclusions and decisions efficiently.</p>
+<p>Back in the day, we used Common Gateway Interface (CGI) perl scripts on the webserver (cgi-bin/) to access a back end database in order to give dynamic access to data-sets: this often required rendering bespoke images as gifs and overlaying clickable regions with html codes. Every dynamic action required a trip from the client web-browser through the 2 tiers of servers and often required much coding work and optimization at various levels to construct a responsive application. Nevertheless, those solutions felt clunky in comparison with plethora of current solutions that are visually more appealing, functional and faster.</p>
+<p>And there are lots of current possibilities:</p>
+<p>This is an article that covers some (not all!) of the current options:</p>
+<p><a href="https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila" title="data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila">data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila</a></p>
+</section>
+<section id="example-types" class="level1">
+<h1>Example types</h1>
 <p>Example #1 is with Dash</p>
-<p>Example #2 and #3 work with Observable JS</p>
+<p>Dash is available for Python, but <a href="https://dash.plotly.com/r/minimal-app" title="not yet ready for R at the time of writing">not yet ready for R at the time of writing</a></p>
+<p>Example #2 and #3 work with Observable</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
