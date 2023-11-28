@@ -1,9 +1,48 @@
 ---
-title: "Dash etc."
+title: "Dash, Observable etc."
 ---
 
-The purpose is to investigate Dash and similar interactive technologies.
+**Some thoughts**
 
-Dash is available for Python, but not ready not yet ready in for R at the time of writing <https://dash.plotly.com/r/minimal-app>
+The purpose here is to investigate the current status of Dash, Observable and similar interactive technologies for data exploration and presentation. There are normally many options, opinions, often fluffy requirements, pros and cons that need to be considered in deciding which one(s) to use, if at all. Not least is the structure of the organization: who is tasked with performing the data analysis or data science? Dynamic plotting and easy accessibility is nice to have, but serious analysis often requires detailed data investigations (domain specific knowledge, careful validation of data, imputation of missing values, normalizations, transformations, statistical hypothesis tests, mathematics, modelling and so on). With this in mind, it is always good to ask why such tools are being deployed? Is it not better for the domain expert to learn some practical data science (or vice versa) or is the team approach better; having the subject domain experts work closely with the data science experts is probably the best option in terms of developing results, conclusions and decisions efficiently.
 
-Example #2 works with Observable JS
+Back in the day, we used Common Gateway Interface (CGI) Perl scripts on the web-server (cgi-bin/) to access a back end database in order to give dynamic access to structured data: this often required rendering bespoke images as gifs and overlaying clickable regions with html codes. Every dynamic action required a trip from the client web-browser through the 2 tiers of servers and that often required much coding work and optimization at various levels to construct a responsive application. Nevertheless, those solutions felt clunky in comparison with plethora of current solutions that are visually more appealing, functional and faster.
+
+And there are lots of current possibilities:
+
+This is an article that covers some (but not all) of the current options:
+
+[data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila](https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila "data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila")
+
+**Example types**
+
+Example #1 is with Dash
+
+-   Dash is available for Python, but [not yet ready for R at the time of writing](https://dash.plotly.com/r/minimal-app "not yet ready for R at the time of writing")
+
+Example #2 and #3 work with Observable
+
+Shiny Examples
+
+My preference is to view functionality and code of with the stock Shiny examples within RStudio and the [gallery](https://shiny.posit.co/r/gallery/ "gallery") provides inspiration.
+
+```         
+# the standard examples are available with the Shiny library
+library(shiny)
+```
+
+```         
+runExample("01_hello")      # a histogram
+runExample("02_text")       # tables and data frames
+runExample("03_reactivity") # a reactive expression
+runExample("04_mpg")        # global variables
+runExample("05_sliders")    # slider bars
+runExample("06_tabsets")    # tabbed panels
+runExample("07_widgets")    # help text and submit buttons
+runExample("08_html")       # Shiny app built from HTML
+runExample("09_upload")     # file upload wizard
+runExample("10_download")   # file download wizard
+runExample("11_timer")      # an automated timer
+```
+
+Streamlit, Voila, Panel are new to me...definitely on the "to do" list..

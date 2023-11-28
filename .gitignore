@@ -165,6 +165,7 @@ cython_debug/
 .gitignore
 _site/
 .Rhistory
-
+.RData
+.DS_Store
 
 

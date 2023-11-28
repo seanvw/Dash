@@ -1,0 +1,88 @@
+---
+title: "Example #3"
+format: dashboard
+---
+
+# Name {.sidebar}
+
+```{ojs}
+
+viewof year_min = Inputs.range( [1880, 2025], {step: 1, value: 1890} )
+
+viewof months = Inputs.checkbox(
+  ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], 
+  { value: ["Jan", "Feb"], 
+    label: "months:"
+  }
+)
+```
+
+Example of using Observable for adjustable plotting. GISS Surface Temperature (GISTEMP) data processed by my [Dashboards](https://seanvw.github.io/Dashboards/ "Dashboards") mini-project and used in some of the examples therein e.g. [Example #4](https://seanvw.github.io/Dashboards/example_4.html#line-by-year-since.. "Example #4").
+
+ScatterPlot 1 and 2 are subtly different: the x-axis is discrete year or by continuous data-time respectively.
+
+# Data
+
+```{ojs}
+Inputs.table(filtered)
+```
+
+# ScatterPlot 1
+
+```{ojs}
+Plot.plot({
+  y: {
+    grid: true,
+    tickFormat: "+C",
+    //label: "Surface temperature anomaly (°C)"
+  },
+  marks: [
+    Plot.ruleY([0]),
+    Plot.frame(),
+    Plot.dot(filtered, {x: "Year", y: "Anomoly_Celcius", color: "month",
+      fill: "month", stroke: "month"})
+  ],
+  color: {scheme: "rainbow"},
+})  
+  
+```
+
+# ScatterPlot 2
+
+```{ojs}
+
+Plot.plot({
+  y: {
+    grid: true,
+    tickFormat: "+C",
+    //label: "Surface temperature anomaly (°C)"
+  },
+  //color: {
+  //  scheme: "turbo",
+  //  legend: false
+  //},
+  marks: [
+    Plot.ruleY([0]),
+    Plot.frame(),
+    Plot.dot(filtered, {x: "Date", y: "Anomoly_Celcius", 
+      fill: "Anomoly_Celcius", stroke: "Anomoly_Celcius"})
+  ]
+})  
+
+/*
+out
+*/
+
+  
+```
+
+```{ojs}
+//| output: false
+
+data = FileAttachment("gistemp.csv").csv({ typed: true })
+
+filtered = data.filter(function(gistemp) {
+  return year_min < gistemp.Year && months.includes(gistemp.month);
+})
+
+```

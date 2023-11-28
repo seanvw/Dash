@@ -2,11 +2,36 @@
 title: "Example #1"
 ---
 
-Running a Dash app within Quarto was possible with ugly hacks but it isn't pretty. May not work. And is not supported. Simply a code exploration to be ignored. Kept in the same way that a journal of negative results is a good thing.
+# Dash Apps
+
+The examples in folder_dash are the standard demo apps. They can be run from the command line and are served through local host
+
+```         
+ ➜  python_dash git:(main) ✗ python3 data_table_py_callback.py
+Dash is running on http://127.0.0.1:8050/
+
+ * Serving Flask app 'data_table_py_callback'
+ * Debug mode: on
+
+```
+
+It looks like this and seems to work as expected:
+
+![Python App with Callbacks](python_dash/dash_app_with_callbacks.png){fig-alt="Python App with Callbacks"}
+
+# Dash within Quarto
+
+Running a Dash app within Quarto was possible with ugly hacks but it isn't pretty. May not work properly and is not supported. Simply a code exploration to be ignored. Kept in the same way that a journal of negative results is a good thing.
+
+When Dash server is running on localhost it looks like this:
+
+![Dash within Quarto](python_dash/dash_in_quarto.png){fig-alt="Dash within Quarto"}
+
+ie. is squashed within the page
 
 <details>
 
-<summary>Show Functions</summary>
+<summary>Show Code</summary>
 
 ```{python}
 # Import packages
